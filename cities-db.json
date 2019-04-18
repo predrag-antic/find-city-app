@@ -1,0 +1,664 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "name": "Belgrade",
+            "country": "Serbia",
+            "population": 1373651,
+            "location": {
+                "latitude": 44.80401,
+                "longitude": 20.46513 
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 38.01,
+                "safetyIndex ": 62.75,
+                "healthIndex ": 54.78,
+                "costOfLivingIndex ": 39.30,
+                "housePriceToIncomeRatio ": 22.21,
+                "trafficTimeIndex ": 34.73,
+                "pollutionIndex ": 60.90,
+                "climateIndex ": 84.14
+            }
+        },
+        {
+            "id": 2,
+            "name": "Novi Sad",
+            "country": "Serbia",
+            "population": 289128,
+            "location": {
+                "latitude": 45.25167,
+                "longitude": 19.83694 
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 45.24,
+                "safetyIndex ": 57.70,
+                "healthIndex ": 46.74,
+                "costOfLivingIndex ": 34.76,
+                "housePriceToIncomeRatio ": 16.41,
+                "trafficTimeIndex ": 18.16,
+                "pollutionIndex ": 47.41,
+                "climateIndex ": 84.02
+            }
+        },
+        {
+            "id": 3,
+            "name": "Zagreb",
+            "country": "Croatia",
+            "population": 698966,
+            "location": {
+                "latitude": 45.81444,
+                "longitude": 15.97798
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 64.64,
+                "safetyIndex ": 75.68,
+                "healthIndex ": 65.50,
+                "costOfLivingIndex ": 51.12,
+                "housePriceToIncomeRatio ": 11.49,
+                "trafficTimeIndex ": 33.75,
+                "pollutionIndex ": 32.48,
+                "climateIndex ": 81.82
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sarajevo",
+            "country": "Bosnia and Herzegovina",
+            "population": 696731,
+            "location": {
+                "latitude": 43.84864,
+                "longitude": 18.35644
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 45.32,
+                "safetyIndex ": 48.90,
+                "healthIndex ": 51.36,
+                "costOfLivingIndex ": 39.11,
+                "housePriceToIncomeRatio ": 14.05,
+                "trafficTimeIndex ": 28.69,
+                "pollutionIndex ": 73.18,
+                "climateIndex ": 78.18
+            }
+        },
+        {
+            "id": 5,
+            "name": "Skopje",
+            "country": "Macedonia",
+            "population": 474889,
+            "location": {
+                "latitude": 41.99646,
+                "longitude": 21.43141 
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 40.38,
+                "safetyIndex ": 55.19,
+                "healthIndex ": 58.89,
+                "costOfLivingIndex ": 34.38,
+                "housePriceToIncomeRatio ": 14.65,
+                "trafficTimeIndex ": 28.22,
+                "pollutionIndex ": 82.62,
+                "climateIndex ": 76.30
+            }
+        },
+        {
+            "id": 6,
+            "name": "Sofia",
+            "country": "Bulgaria",
+            "population": 1152556,
+            "location": {
+                "latitude": 42.69751,
+                "longitude": 23.32415
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 61.30,
+                "safetyIndex ": 55.71,
+                "healthIndex ": 54.15,
+                "costOfLivingIndex ": 40.17,
+                "housePriceToIncomeRatio ": 8.87,
+                "trafficTimeIndex ": 30.16,
+                "pollutionIndex ": 66.10,
+                "climateIndex ": 76.01
+            }
+        },
+        {
+            "id": 7,
+            "name": "Budapest",
+            "country": "Hungary",
+            "population": 1741041,
+            "location": {
+                "latitude": 47.49835,
+                "longitude": 19.04045
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 57.54,
+                "safetyIndex ": 63.49,
+                "healthIndex ": 46.68,
+                "costOfLivingIndex ": 45.56,
+                "housePriceToIncomeRatio ": 14.83,
+                "trafficTimeIndex ": 37.90,
+                "pollutionIndex ": 52.74,
+                "climateIndex ": 78.41
+            }
+        },
+        {
+            "id": 8,
+            "name": "Bucharest",
+            "country": "Romania",
+            "population": 1877155,
+            "location": {
+                "latitude": 44.43225,
+                "longitude": 26.10626
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 57.53,
+                "safetyIndex ": 72.26,
+                "healthIndex ": 53.69,
+                "costOfLivingIndex ": 39.60,
+                "housePriceToIncomeRatio ": 11.08,
+                "trafficTimeIndex ": 41.53,
+                "pollutionIndex ": 73.87,
+                "climateIndex ": 75.61
+            }
+        },
+        {
+            "id": 9,
+            "name": "Ljubljana",
+            "country": "Slovenia",
+            "population": 272296,
+            "location": {
+                "latitude": 46.05108,
+                "longitude": 14.50513
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 72.81,
+                "safetyIndex ": 77.24,
+                "healthIndex ": 63.55,
+                "costOfLivingIndex ": 54.94,
+                "housePriceToIncomeRatio ": 13.38,
+                "trafficTimeIndex ": 25.40,
+                "pollutionIndex ": 24.13,
+                "climateIndex ": 77.14
+            }
+        },
+        {
+            "id": 10,
+            "name": "Athens",
+            "country": "Greece",
+            "population": 664046,
+            "location": {
+                "latitude": 37.98376,
+                "longitude": 23.72784
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 50.25,
+                "safetyIndex ": 51.89,
+                "healthIndex ": 54.39,
+                "costOfLivingIndex ": 58.31,
+                "housePriceToIncomeRatio ": 10.30,
+                "trafficTimeIndex ": 35.95,
+                "pollutionIndex ": 58.25,
+                "climateIndex ": 95.18
+            }
+        },
+        {
+            "id": 11,
+            "name": "Thessaloniki",
+            "country": "Greece",
+            "population": 354290,
+            "location": {
+                "latitude": 40.64361,
+                "longitude": 22.93086 
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 47.68,
+                "safetyIndex ": 65.05,
+                "healthIndex ": 56.19,
+                "costOfLivingIndex ": 56.49,
+                "housePriceToIncomeRatio ": 10.74,
+                "trafficTimeIndex ": 26.19,
+                "pollutionIndex ": 63.27,
+                "climateIndex ": 88.39
+            }
+        },
+        {
+            "id": 12,
+            "name": "Rome",
+            "country": "Italy",
+            "population": 2318895,
+            "location": {
+                "latitude": 41.89193,
+                "longitude": 12.51133
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 64.52,
+                "safetyIndex ": 46.99,
+                "healthIndex ": 59.63,
+                "costOfLivingIndex ": 69.84,
+                "housePriceToIncomeRatio ": 19.80,
+                "trafficTimeIndex ": 46.29,
+                "pollutionIndex ": 66.67,
+                "climateIndex ": 93.70
+            }
+        },
+        {
+            "id": 13,
+            "name": "Milan",
+            "country": "Italy",
+            "population": 1236837,
+            "location": {
+                "latitude": 45.46427,
+                "longitude": 9.18951
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 68.87,
+                "safetyIndex ": 55.58,
+                "healthIndex ": 71.06,
+                "costOfLivingIndex ": 72.64,
+                "housePriceToIncomeRatio ": 17.28,
+                "trafficTimeIndex ": 37.39,
+                "pollutionIndex ": 63.46,
+                "climateIndex ": 88.12
+            }
+        },
+        {
+            "id": 14,
+            "name": "Vienna",
+            "country": "Austria",
+            "population": 1691468,
+            "location": {
+                "latitude": 48.20849,
+                "longitude": 16.37208
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 98.23,
+                "safetyIndex ": 77.45,
+                "healthIndex ": 79.05,
+                "costOfLivingIndex ": 69.12,
+                "housePriceToIncomeRatio ": 12.73,
+                "trafficTimeIndex ": 24.76,
+                "pollutionIndex ": 16.99,
+                "climateIndex ": 80.35
+            }
+        },
+        {
+            "id": 15,
+            "name": "Munich",
+            "country": "Germany",
+            "population": 1260391,
+            "location": {
+                "latitude": 48.13743,
+                "longitude": 11.57549
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 110.33,
+                "safetyIndex ": 83.02,
+                "healthIndex ": 80.66,
+                "costOfLivingIndex ": 73.37,
+                "housePriceToIncomeRatio ": 16.11,
+                "trafficTimeIndex ": 33.16,
+                "pollutionIndex ": 22.08,
+                "climateIndex ": 75.98
+            }
+        },
+        {
+            "id": 16,
+            "name": "Berlin",
+            "country": "Germany",
+            "population": 3426354,
+            "location": {
+                "latitude": 52.52437,
+                "longitude": 13.41053
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 104.74,
+                "safetyIndex ": 60.19,
+                "healthIndex ": 70.27,
+                "costOfLivingIndex ": 68.62,
+                "housePriceToIncomeRatio ": 10.53,
+                "trafficTimeIndex ": 33.21,
+                "pollutionIndex ": 40.63,
+                "climateIndex ": 83.35
+            }
+        },
+        {
+            "id": 17,
+            "name": "Paris",
+            "country": "France",
+            "population": 2138551,
+            "location": {
+                "latitude": 48.85341,
+                "longitude": 2.3488
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 89.27,
+                "safetyIndex ": 47.98,
+                "healthIndex ": 74.82,
+                "costOfLivingIndex ": 84.27,
+                "housePriceToIncomeRatio ": 19.12,
+                "trafficTimeIndex ": 42.64,
+                "pollutionIndex ": 67.71,
+                "climateIndex ": 88.39
+            }
+        },
+        {
+            "id": 18,
+            "name": "Madrid",
+            "country": "Spain",
+            "population": 3255944,
+            "location": {
+                "latitude": 40.4165,
+                "longitude": -3.70256  
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 79.59,
+                "safetyIndex ": 64.85,
+                "healthIndex ": 78.58,
+                "costOfLivingIndex ": 60.48,
+                "housePriceToIncomeRatio ": 12.26,
+                "trafficTimeIndex ": 35.24,
+                "pollutionIndex ": 56.28,
+                "climateIndex ": 85.47
+            }
+        },
+        {
+            "id": 19,
+            "name": "Barcelona",
+            "country": "Spain",
+            "population": 1621537,
+            "location": {
+                "latitude": 41.38879,
+                "longitude": 2.15899
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 76.02,
+                "safetyIndex ": 57.25,
+                "healthIndex ": 75.36,
+                "costOfLivingIndex ": 60.20,
+                "housePriceToIncomeRatio ": 13.81,
+                "trafficTimeIndex ": 31.03,
+                "pollutionIndex ": 65.83,
+                "climateIndex ": 95.73
+            }
+        },
+        {
+            "id": 20,
+            "name": "Lisabon",
+            "country": "Portugal",
+            "population": 517802,
+            "location": {
+                "latitude": 38.71667,
+                "longitude": -9.13333
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 51.16,
+                "safetyIndex ": 69.22,
+                "healthIndex ": 70.76,
+                "costOfLivingIndex ": 53.67,
+                "housePriceToIncomeRatio ": 18.00,
+                "trafficTimeIndex ": 35.45,
+                "pollutionIndex ": 38.41,
+                "climateIndex ": 98.59
+            }
+        },
+        {
+            "id": 21,
+            "name": "Porto",
+            "country": "Portugal",
+            "population": 249633,
+            "location": {
+                "latitude": 41.14961,
+                "longitude": -8.61099
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 53.20,
+                "safetyIndex ": 58.54,
+                "healthIndex ": 73.75,
+                "costOfLivingIndex ": 50.98,
+                "housePriceToIncomeRatio ": 12.81,
+                "trafficTimeIndex ": 28.69,
+                "pollutionIndex ": 36.85,
+                "climateIndex ": 96.61
+            }
+        },
+        {
+            "id": 22,
+            "name": "London",
+            "country": "United Kingdom",
+            "population": 8132652,
+            "location": {
+                "latitude": 51.50853,
+                "longitude": -0.12574
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 92.76,
+                "safetyIndex ": 48.52,
+                "healthIndex ": 67.85,
+                "costOfLivingIndex ": 81.40,
+                "housePriceToIncomeRatio ": 20.83,
+                "trafficTimeIndex ": 47.03,
+                "pollutionIndex ": 59.65,
+                "climateIndex ": 88.25
+            }
+        },
+        {
+            "id": 23,
+            "name": "Manchester",
+            "country": "United Kingdom",
+            "population": 395515,
+            "location": {
+                "latitude": 53.48095,
+                "longitude": -2.23743
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 96.52,
+                "safetyIndex ": 44.19,
+                "healthIndex ": 77.70,
+                "costOfLivingIndex ": 67.68,
+                "housePriceToIncomeRatio ": 9.09,
+                "trafficTimeIndex ": 40.57,
+                "pollutionIndex ": 55.62,
+                "climateIndex ": 86.95
+            }
+        },
+        {
+            "id": 24,
+            "name": "Zurich",
+            "country": "Switzerland",
+            "population": 341730,
+            "location": {
+                "latitude": 47.36667,
+                "longitude": 8.55
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 139.94,
+                "safetyIndex ": 81.73,
+                "healthIndex ": 75.00,
+                "costOfLivingIndex ": 126.87,
+                "housePriceToIncomeRatio ": 9.46,
+                "trafficTimeIndex ": 33.63,
+                "pollutionIndex ": 15.94,
+                "climateIndex ": 81.48
+            }
+        },
+        {
+            "id": 25,
+            "name": "Geneva",
+            "country": "Switzerland",
+            "population": 183981,
+            "location": {
+                "latitude": 46.20222,
+                "longitude": 6.14569
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 126.36,
+                "safetyIndex ": 72.11,
+                "healthIndex ": 69.92,
+                "costOfLivingIndex ": 118.87,
+                "housePriceToIncomeRatio ": 10.34,
+                "trafficTimeIndex ": 24.81,
+                "pollutionIndex ": 29.44,
+                "climateIndex ": 82.61
+            }
+        },
+        {
+            "id": 26,
+            "name": "Oslo",
+            "country": "Norway",
+            "population": 634293,
+            "location": {
+                "latitude": 59.91273,
+                "longitude": 10.74609 
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 100.91,
+                "safetyIndex ": 61.61,
+                "healthIndex ": 73.43,
+                "costOfLivingIndex ": 101.90,
+                "housePriceToIncomeRatio ": 10.91,
+                "trafficTimeIndex ": 33.48,
+                "pollutionIndex ": 24.32,
+                "climateIndex ": 59.99
+            }
+        },
+        {
+            "id": 27,
+            "name": "Stockholm",
+            "country": "Sweden",
+            "population": 1515017,
+            "location": {
+                "latitude": 59.33258,
+                "longitude": 18.0649
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 104.00,
+                "safetyIndex ": 52.82,
+                "healthIndex ": 68.13,
+                "costOfLivingIndex ": 78.75,
+                "housePriceToIncomeRatio ": 14.42,
+                "trafficTimeIndex ": 37.16,
+                "pollutionIndex ": 16.73,
+                "climateIndex ": 69.67
+            }
+        },
+        {
+            "id": 28,
+            "name": "Moscow",
+            "country": "Russia",
+            "population": 10381222,
+            "location": {
+                "latitude": 55.75222,
+                "longitude": 37.61556
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 61.74,
+                "safetyIndex ": 58.49,
+                "healthIndex ": 57.79,
+                "costOfLivingIndex ": 41.46,
+                "housePriceToIncomeRatio ": 18.41,
+                "trafficTimeIndex ": 53.68,
+                "pollutionIndex ": 61.32,
+                "climateIndex ": 55.83
+            }
+        },
+        {
+            "id": 29,
+            "name": "Saint Petersburg",
+            "country": "Russia",
+            "population": 4848742,
+            "location": {
+                "latitude": 59.93863,
+                "longitude": 30.31413
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 52.08,
+                "safetyIndex ": 60.11,
+                "healthIndex ": 58.67,
+                "costOfLivingIndex ": 37.22,
+                "housePriceToIncomeRatio ": 14.17,
+                "trafficTimeIndex ": 48.54,
+                "pollutionIndex ": 61.22,
+                "climateIndex ": 60.64
+            }
+        },
+        {
+            "id": 30,
+            "name": "Warsaw",
+            "country": "Poland",
+            "population": 1702139,
+            "location": {
+                "latitude": 52.22977,
+                "longitude": 21.01178
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 73.97,
+                "safetyIndex ": 73.41,
+                "healthIndex ": 62.64,
+                "costOfLivingIndex ": 42.64,
+                "housePriceToIncomeRatio ": 12.14,
+                "trafficTimeIndex ": 36.31,
+                "pollutionIndex ": 55.62,
+                "climateIndex ": 74.61
+            }
+        },
+        {
+            "id": 31,
+            "name": "Gdansk",
+            "country": "Poland",
+            "population": 461865,
+            "location": {
+                "latitude": 54.35205,
+                "longitude": 18.64637
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 72.35,
+                "safetyIndex ": 68.23,
+                "healthIndex ": 60.51,
+                "costOfLivingIndex ": 41.65,
+                "housePriceToIncomeRatio ": 10.35,
+                "trafficTimeIndex ": 28.17,
+                "pollutionIndex ": 28.58,
+                "climateIndex ": 75.51
+            }
+        },
+        {
+            "id": 32,
+            "name": "Prague",
+            "country": "Czech Republic",
+            "population": 1165581,
+            "location": {
+                "latitude": 50.08804,
+                "longitude": 14.42076
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 73.39,
+                "safetyIndex ": 74.05,
+                "healthIndex ": 73.10,
+                "costOfLivingIndex ": 48.40,
+                "housePriceToIncomeRatio ": 17.69,
+                "trafficTimeIndex ": 33.46,
+                "pollutionIndex ": 36.13,
+                "climateIndex ": 80.67
+            }
+        },
+        {
+            "id": 33,
+            "name": "Amsterdam",
+            "country": "Netherlands",
+            "population": 741636,
+            "location": {
+                "latitude": 52.37403,
+                "longitude": 4.88969
+            },
+            "indices": {
+                "purchasingPowerInclRentIndex": 96.16,
+                "safetyIndex ": 65.52,
+                "healthIndex ": 70.74,
+                "costOfLivingIndex ": 80.88,
+                "housePriceToIncomeRatio ": 11.31,
+                "trafficTimeIndex ": 30.93,
+                "pollutionIndex ": 30.77,
+                "climateIndex ": 87.45
+            }
+        }
+    ]
+}
