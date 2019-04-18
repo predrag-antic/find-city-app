@@ -13,7 +13,9 @@ export class CityService {
             .then(data => console.log(data))
         );
     }
-    //data.location.latitude
+
+    // Need more functions..
+    // data.location.latitude
 
 }
 

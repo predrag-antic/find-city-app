@@ -1,7 +1,7 @@
 {
     "cities": [
         {
-            "id": 1,
+            "id": "belgrade",
             "name": "Belgrade",
             "country": "Serbia",
             "population": 1373651,
@@ -21,7 +21,7 @@
             }
         },
         {
-            "id": 2,
+            "id": "novi sad",
             "name": "Novi Sad",
             "country": "Serbia",
             "population": 289128,
@@ -41,7 +41,7 @@
             }
         },
         {
-            "id": 3,
+            "id": "zagreb",
             "name": "Zagreb",
             "country": "Croatia",
             "population": 698966,
@@ -61,7 +61,7 @@
             }
         },
         {
-            "id": 4,
+            "id": "sarajevo",
             "name": "Sarajevo",
             "country": "Bosnia and Herzegovina",
             "population": 696731,
@@ -81,7 +81,7 @@
             }
         },
         {
-            "id": 5,
+            "id": "skopje",
             "name": "Skopje",
             "country": "Macedonia",
             "population": 474889,
@@ -101,7 +101,7 @@
             }
         },
         {
-            "id": 6,
+            "id": "sofia",
             "name": "Sofia",
             "country": "Bulgaria",
             "population": 1152556,
@@ -121,7 +121,7 @@
             }
         },
         {
-            "id": 7,
+            "id": "budapest",
             "name": "Budapest",
             "country": "Hungary",
             "population": 1741041,
@@ -141,7 +141,7 @@
             }
         },
         {
-            "id": 8,
+            "id": "bucharest",
             "name": "Bucharest",
             "country": "Romania",
             "population": 1877155,
@@ -161,7 +161,7 @@
             }
         },
         {
-            "id": 9,
+            "id": "ljubljana",
             "name": "Ljubljana",
             "country": "Slovenia",
             "population": 272296,
@@ -181,7 +181,7 @@
             }
         },
         {
-            "id": 10,
+            "id": "athens",
             "name": "Athens",
             "country": "Greece",
             "population": 664046,
@@ -201,7 +201,7 @@
             }
         },
         {
-            "id": 11,
+            "id": "thessaloniki",
             "name": "Thessaloniki",
             "country": "Greece",
             "population": 354290,
@@ -221,7 +221,7 @@
             }
         },
         {
-            "id": 12,
+            "id": "rome",
             "name": "Rome",
             "country": "Italy",
             "population": 2318895,
@@ -241,7 +241,7 @@
             }
         },
         {
-            "id": 13,
+            "id": "milan",
             "name": "Milan",
             "country": "Italy",
             "population": 1236837,
@@ -261,7 +261,7 @@
             }
         },
         {
-            "id": 14,
+            "id": "vienna",
             "name": "Vienna",
             "country": "Austria",
             "population": 1691468,
@@ -281,7 +281,7 @@
             }
         },
         {
-            "id": 15,
+            "id": "munich",
             "name": "Munich",
             "country": "Germany",
             "population": 1260391,
@@ -301,7 +301,7 @@
             }
         },
         {
-            "id": 16,
+            "id": "berlin",
             "name": "Berlin",
             "country": "Germany",
             "population": 3426354,
@@ -321,7 +321,7 @@
             }
         },
         {
-            "id": 17,
+            "id": "paris",
             "name": "Paris",
             "country": "France",
             "population": 2138551,
@@ -341,7 +341,7 @@
             }
         },
         {
-            "id": 18,
+            "id": "madrid",
             "name": "Madrid",
             "country": "Spain",
             "population": 3255944,
@@ -361,7 +361,7 @@
             }
         },
         {
-            "id": 19,
+            "id": "barcelona",
             "name": "Barcelona",
             "country": "Spain",
             "population": 1621537,
@@ -381,8 +381,8 @@
             }
         },
         {
-            "id": 20,
-            "name": "Lisabon",
+            "id": "lisbon",
+            "name": "Lisbon",
             "country": "Portugal",
             "population": 517802,
             "location": {
@@ -401,7 +401,7 @@
             }
         },
         {
-            "id": 21,
+            "id": "porto",
             "name": "Porto",
             "country": "Portugal",
             "population": 249633,
@@ -421,7 +421,7 @@
             }
         },
         {
-            "id": 22,
+            "id": "london",
             "name": "London",
             "country": "United Kingdom",
             "population": 8132652,
@@ -441,7 +441,7 @@
             }
         },
         {
-            "id": 23,
+            "id": "manchester",
             "name": "Manchester",
             "country": "United Kingdom",
             "population": 395515,
@@ -461,7 +461,7 @@
             }
         },
         {
-            "id": 24,
+            "id": "zurich",
             "name": "Zurich",
             "country": "Switzerland",
             "population": 341730,
@@ -481,7 +481,7 @@
             }
         },
         {
-            "id": 25,
+            "id": "geneva",
             "name": "Geneva",
             "country": "Switzerland",
             "population": 183981,
@@ -501,7 +501,7 @@
             }
         },
         {
-            "id": 26,
+            "id": "oslo",
             "name": "Oslo",
             "country": "Norway",
             "population": 634293,
@@ -521,7 +521,7 @@
             }
         },
         {
-            "id": 27,
+            "id": "stockholm",
             "name": "Stockholm",
             "country": "Sweden",
             "population": 1515017,
@@ -541,7 +541,7 @@
             }
         },
         {
-            "id": 28,
+            "id": "moscow",
             "name": "Moscow",
             "country": "Russia",
             "population": 10381222,
@@ -561,7 +561,7 @@
             }
         },
         {
-            "id": 29,
+            "id": "saint petersburg",
             "name": "Saint Petersburg",
             "country": "Russia",
             "population": 4848742,
@@ -581,7 +581,7 @@
             }
         },
         {
-            "id": 30,
+            "id": "warsaw",
             "name": "Warsaw",
             "country": "Poland",
             "population": 1702139,
@@ -601,7 +601,7 @@
             }
         },
         {
-            "id": 31,
+            "id": "gdansk",
             "name": "Gdansk",
             "country": "Poland",
             "population": 461865,
@@ -621,7 +621,7 @@
             }
         },
         {
-            "id": 32,
+            "id": "prague",
             "name": "Prague",
             "country": "Czech Republic",
             "population": 1165581,
@@ -641,7 +641,7 @@
             }
         },
         {
-            "id": 33,
+            "id": "amsterdam",
             "name": "Amsterdam",
             "country": "Netherlands",
             "population": 741636,
