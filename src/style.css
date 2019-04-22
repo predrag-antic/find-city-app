@@ -39,10 +39,6 @@ img {
     z-index: -1;
 }
 
-.searchDiv {
-       
-}
-
 .label {
     font-size: 22px;
     font-weight: 500;
@@ -62,13 +58,83 @@ img {
 }
 
 .change {
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     background: #c57e6d;
     display: flex;
     flex-direction: column;
 }
 
 .cityContainer {
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 50px;
     background: #f5ddd5;
+    border: 5px solid black;
+    font-size: 20px;
+
+}
+
+.selCityName {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.selCityInfo {
+    font-weight: 600;
+}
+
+.cityInfo,.cityLoc{
+    display: flex;
+    margin: 30px 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.indices {
+    margin: 30px 50px;
+}
+
+.indicesRow {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+
+.indicesRow > h3{
+    margin-left: 20px;
+}
+
+.exploreCityContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #f5ddd5;
+    font-size: 20px;
+}
+
+.searchCitiesForm {
+    margin: 50px 0;
+}
+
+.selectionIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+
+.selInd select{
+    display: none;
+}
+
+.selInd {
+    height: 40px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa;
 }

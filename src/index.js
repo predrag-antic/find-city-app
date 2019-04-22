@@ -1,6 +1,7 @@
 
 import { CityService } from "./CityService";
-import { Observable } from "rxjs";
+import { Observable, fromEvent } from "rxjs";
+import { map, switchMap, debounceTime} from "rxjs/operators";
 
 const service = new CityService();
 
@@ -19,7 +20,7 @@ function createHeader() {
 
 function createSearcCityForm() {
     const cont = document.createElement('div');
-    cont.className = "container searchDiv my-5";
+    cont.className = "container my-5";
     document.body.appendChild(cont);
 
     const row = document.createElement('div');
@@ -35,6 +36,7 @@ function createSearcCityForm() {
     label.innerHTML = "Already know where you're headed?";
     searchCity.appendChild(label); 
     let input = document.createElement('input');
+    input.className = "cityName";
     searchCity.appendChild(input);
     const btn = document.createElement('button');
     btn.className = "btn ml-3";
@@ -64,7 +66,7 @@ function createChangingPart() {
 }
 
 function searchCityForm() {
-    //CHANGE WHOLE
+    
     const changeDiv = document.getElementsByClassName('change');
     changeDiv[0].innerHTML = '';
         
@@ -72,18 +74,149 @@ function searchCityForm() {
     cityContainer.className = "cityContainer container";
     changeDiv[0].appendChild(cityContainer); 
     
-    //test
-    service.getCityById("madrid");
-    var cityName = document.createElement('div');
-    cityName.innerHTML = `<h1></h1>`;
-    cityContainer.appendChild(cityName);
+    getCityName();
+
 }
 
+//repair this function..
+function getCityName(){
+    const cityName = document.getElementsByClassName("cityName");
+    fromEvent(cityName[0],"input").pipe(
+    map(ev=>ev.target.value),
+    switchMap(name=>service.getCityById(name)))
+    .subscribe(city => showCityName(city)); 
+}; 
+
+function showCityName(city){
+    const cityContainer = document.getElementsByClassName('cityContainer');
+    cityContainer[0].innerHTML = `<h1 class='text-center selCityName mt-3'>${city.name}</h1>
+                                    <div class='cityInfo'>
+                                        <div>Country: <h3 class='selCityInfo'>${city.country}</h3></div> 
+                                        <div>Population: <h3 class='selCityInfo'>${city.population}</h3></div>
+                                    </div>
+                                    <div class='cityLoc'>
+                                        <div>Latitude:<h3 class='selCityInfo'>${city.location.latitude}</h3></div>
+                                        <div>Location:<h3><a class='btn' target='_blank' rel='noopener noreferrer' href='https://www.google.com/maps/@${city.location.latitude},${city.location.longitude},10z'>See on Map</a></h3></div>
+                                        <div>Longitude:<h3 class='selCityInfo'>${city.location.longitude}</h3></div>
+                                    </div>
+                                    <hr>
+                                    <div class='indices'>
+                                        <div class='indicesRow'>Purchasing Power Index: <h3 class='selCityInfo'>${city.indices.purchasingPowerInclRentIndex}</h3></div>
+                                        <div class='indicesRow'>Safety Index: <h3 class='selCityInfo'>${city.indices.safetyIndex}</h3></div>
+                                        <div class='indicesRow'>Health Care Index: <h3 class='selCityInfo'>${city.indices.healthIndex}</h3></div>
+                                        <div class='indicesRow'>Cost of Living Index: <h3 class='selCityInfo'>${city.indices.costOfLivingIndex}</h3></div>
+                                        <div class='indicesRow'>Property Price to Income Ratio: <h3 class='selCityInfo'>${city.indices.housePriceToIncomeRatio}</h3></div>
+                                        <div class='indicesRow'>Traffic Commute Time Index: <h3 class='selCityInfo'>${city.indices.trafficTimeIndex}</h3></div>
+                                        <div class='indicesRow'>Pollution Index: <h3 class='selCityInfo'>${city.indices.pollutionIndex}</h3></div>
+                                        <div class='indicesRow'>Climate Index: <h3 class='selCityInfo'>${city.indices.climateIndex}</h3></div>
+                                    </div>
+                                        
+                                    `;
+    
+}
+
+
+//                 
 function exploreCitiesForm() {
     //CHANGE WHOLE
-    var changeDiv = document.getElementsByClassName('change');
-    var lbl = document.createElement('label');
+    const changeDiv = document.getElementsByClassName('change');
     changeDiv[0].innerHTML = '';
-    lbl.innerHTML = "Proba!";
-    changeDiv[0].appendChild(lbl);
-}          
+    
+    const cityContainer = document.createElement('div');
+    cityContainer.className = "exploreCityContainer container";
+    changeDiv[0].appendChild(cityContainer);
+
+    createSearchCitiesForm();
+}         
+
+function createSearchCitiesForm() {
+    const exploreCityContainer = document.getElementsByClassName('exploreCityContainer');
+
+    const searchCitiesForm = document.createElement('div');
+    searchCitiesForm.className = 'searchCitiesForm';  
+    exploreCityContainer[0].appendChild(searchCitiesForm);
+
+    const selectionIndex = document.createElement('div');
+    selectionIndex.className = 'selectionIndex';
+    searchCitiesForm.appendChild(selectionIndex);
+
+    const label = document.createElement('label');
+    label.className = 'label';
+    label.innerHTML = 'What metters to you:'
+    selectionIndex.appendChild(label);
+
+    const selectForm = document.createElement('div');
+    selectionIndex.appendChild(selectForm);
+
+    const select = document.createElement('select');
+    select.className = 'selInd';
+    selectForm.appendChild(select);
+    
+    var option = document.createElement('option');
+    option.innerHTML = 'Purchasing Power';
+    option.value = 'purchasingPowerInclRentIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Safety';
+    option.value = 'safetyIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Health Care';
+    option.value = 'healthIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Cost of Living';
+    option.value = 'costOfLivingIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Property Price to Income Ratio';
+    option.value = 'housePriceToIncomeRatio';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Traffic Commute Time';
+    option.value = 'trafficTimeIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Pollution';
+    option.value = 'pollutionIndex';
+    select.appendChild(option);
+    var option = document.createElement('option');
+    option.innerHTML = 'Climate';
+    option.value = 'climateIndex';
+    select.appendChild(option);
+
+    const button = document.createElement('button');
+    button.className = 'btn ml-3';
+    button.innerHTML = 'Search';
+    button.onclick = showCitiesByIndex;
+    selectForm.appendChild(button);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'infoDiv mt-5';
+    selectionIndex.appendChild(infoDiv);
+
+}
+
+function showCitiesByIndex() {
+    const index = document.getElementsByClassName('selInd')[0].value;
+    
+    Promise.all([
+        index,
+        service.getCities()
+    ])
+    .then(([index,cities]) => {
+        getIndicesWithNames(cities,index);
+    })
+
+}
+  
+function getIndicesWithNames(cities,index) {
+    const infoDiv = document.getElementsByClassName('infoDiv');
+    infoDiv[0].innerHTML = " ";
+    cities.forEach( city => { 
+        const ind = service.getIndexOfCity(city.id,index);
+        var nameWithIndex = document.createElement('div');
+        nameWithIndex.innerHTML = `${city.name} - ${ind}`;
+        infoDiv[0].appendChild(nameWithIndex);
+    });
+}
