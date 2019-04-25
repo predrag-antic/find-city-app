@@ -1,12 +1,11 @@
 
 import { CityService } from "./CityService";
-import { Observable, fromEvent } from "rxjs";
-import { map, switchMap, debounceTime} from "rxjs/operators";
+import { Observable, fromEvent, from } from "rxjs";
+import { map, switchMap, debounceTime, take} from "rxjs/operators";
 
 const service = new CityService();
 
-//service.getCityById(2);
-
+alertTime();
 createHeader();
 createSearcCityForm();
 createChangingPart();
@@ -66,7 +65,6 @@ function createChangingPart() {
 }
 
 function searchCityForm() {
-    
     const changeDiv = document.getElementsByClassName('change');
     changeDiv[0].innerHTML = '';
         
@@ -74,17 +72,13 @@ function searchCityForm() {
     cityContainer.className = "cityContainer container";
     changeDiv[0].appendChild(cityContainer); 
     
-    getCityName();
-
-}
-
-//repair this function..
-function getCityName(){
     const cityName = document.getElementsByClassName("cityName");
     fromEvent(cityName[0],"input").pipe(
-    map(ev=>ev.target.value),
-    switchMap(name=>service.getCityById(name)))
-    .subscribe(city => showCityName(city)); 
+        debounceTime(500),
+        map(ev=>ev.target.value),
+        switchMap(name=>service.getCityById(name))
+    )
+    .subscribe(city => showCityName(city));
 }; 
 
 function showCityName(city){
@@ -109,16 +103,11 @@ function showCityName(city){
                                         <div class='indicesRow'>Traffic Commute Time Index: <h3 class='selCityInfo'>${city.indices.trafficTimeIndex}</h3></div>
                                         <div class='indicesRow'>Pollution Index: <h3 class='selCityInfo'>${city.indices.pollutionIndex}</h3></div>
                                         <div class='indicesRow'>Climate Index: <h3 class='selCityInfo'>${city.indices.climateIndex}</h3></div>
-                                    </div>
-                                        
-                                    `;
+                                    </div>`;
     
 }
-
-
-//                 
+        
 function exploreCitiesForm() {
-    //CHANGE WHOLE
     const changeDiv = document.getElementsByClassName('change');
     changeDiv[0].innerHTML = '';
     
@@ -191,32 +180,142 @@ function createSearchCitiesForm() {
     button.onclick = showCitiesByIndex;
     selectForm.appendChild(button);
 
+    const topCities = document.createElement('div');
+    topCities.className = 'topCities';
+    selectionIndex.appendChild(topCities);
+
+    var label2 = document.createElement('label');
+    label2.className = 'labelTOP';
+    label2.innerHTML = 'See our TOP ';
+    topCities.appendChild(label2);
+
+    const selectNum = document.createElement('select');
+    selectNum.className = 'selNum ml-3';
+    topCities.appendChild(selectNum);
+
+    for(let i=1;i<6;i++){
+        var option = document.createElement('option');
+        option.innerHTML = i*5;
+        option.value = i*5;
+        selectNum.appendChild(option);
+    } 
+
+    const buttonSearch = document.createElement('button');
+    buttonSearch.className = 'btnSrc btn ml-3';
+    buttonSearch.innerHTML = 'Search';
+    buttonSearch.onclick = getTopCities;
+    topCities.appendChild(buttonSearch);
+    
+    const rndBtn = document.createElement('button');
+    rndBtn.className = 'rndBtn btn';
+    rndBtn.innerHTML = 'Get RANDOM city';
+    rndBtn.onclick = getRandomCity;
+    selectionIndex.appendChild(rndBtn);
+    
     const infoDiv = document.createElement('div');
     infoDiv.className = 'infoDiv mt-5';
-    selectionIndex.appendChild(infoDiv);
-
+    selectionIndex.appendChild(infoDiv); 
 }
 
 function showCitiesByIndex() {
     const index = document.getElementsByClassName('selInd')[0].value;
-    
-    Promise.all([
-        index,
-        service.getCities()
-    ])
-    .then(([index,cities]) => {
-        getIndicesWithNames(cities,index);
-    })
-
+    service.getCitiesByIndex(index).then(cities=>getIndicesWithNames(cities,index));
 }
   
 function getIndicesWithNames(cities,index) {
     const infoDiv = document.getElementsByClassName('infoDiv');
     infoDiv[0].innerHTML = " ";
     cities.forEach( city => { 
-        const ind = service.getIndexOfCity(city.id,index);
         var nameWithIndex = document.createElement('div');
-        nameWithIndex.innerHTML = `${city.name} - ${ind}`;
+        nameWithIndex.innerHTML = `<a target='_blank' rel='noopener noreferrer' href='https://www.google.com/maps/@${city.location.latitude},${city.location.longitude},10z'>${city.name}</a> - ${city.indices[index]}`;
         infoDiv[0].appendChild(nameWithIndex);
     });
 }
+
+function getTopCities() {
+    const infoDiv = document.getElementsByClassName('infoDiv');
+    infoDiv[0].innerHTML = " ";
+ 
+    const btn = document.getElementsByClassName('btnSrc');
+    const select = document.getElementsByClassName('selNum')[0].value;
+   
+    const qualityOfLifeDiv = document.createElement('div');
+    qualityOfLifeDiv.innerHTML = `<label class='mb-4 qol'>Quality of Life</label>`;
+    infoDiv[0].appendChild(qualityOfLifeDiv);
+    fromEvent(btn[0],"click")
+    .subscribe(service.getTopXCities(select).then(cities => cities.forEach(city => showIndex(city))));
+}
+
+function showIndex(city) {
+    const ind = qualityOfLifeIndex(city);
+    const infoDiv = document.getElementsByClassName('infoDiv');
+    var nameWithIndex = document.createElement('div');
+    nameWithIndex.innerHTML = `<a target='_blank' rel='noopener noreferrer' href='https://www.google.com/maps/@${city.location.latitude},${city.location.longitude},10z'>${city.name}</a> - ${ind}`;
+    infoDiv[0].appendChild(nameWithIndex);
+}
+
+function getRandomCity(){
+    const infoDiv = document.getElementsByClassName('infoDiv');
+    infoDiv[0].innerHTML = " ";
+    
+    from(service.getCities()).pipe(
+        map(cities => cities.length),
+        switchMap(num => getRandomNumber(num))
+    ).subscribe(rndNum => {
+        service.getCities().then(cities=> showRandomCity(cities[rndNum]))
+    })
+}
+
+function showRandomCity(city){
+    const infoDiv = document.getElementsByClassName('infoDiv');
+    var cityInfos = document.createElement('div');
+
+    cityInfos.className = 'cityInfos table-responsive';
+    cityInfos.innerHTML = ` <table class='table'>
+                                <tr><th scope="col">Name</th><th scope="col">Country</th><th scope="col">Population</th><th scope="col">Quality of Life Index</th></tr>
+                                <tr><td>${city.name}</td><td>${city.country}</td><td>${city.population}</td><td>${city.indices.qualityOfLifeIndex}</td></tr>
+                            </table>
+                            <div class='indices'>
+                                        <div class='indicesRow'>Purchasing Power Index: <h5 class='selCityInfo'>${city.indices.purchasingPowerInclRentIndex}</h5></div>
+                                        <div class='indicesRow'>Safety Index: <h5 class='selCityInfo'>${city.indices.safetyIndex}</h5></div>
+                                        <div class='indicesRow'>Health Care Index: <h5 class='selCityInfo'>${city.indices.healthIndex}</h5></div>
+                                        <div class='indicesRow'>Cost of Living Index: <h5 class='selCityInfo'>${city.indices.costOfLivingIndex}</h5></div>
+                                        <div class='indicesRow'>Property Price to Income Ratio: <h5 class='selCityInfo'>${city.indices.housePriceToIncomeRatio}</h5></div>
+                                        <div class='indicesRow'>Traffic Commute Time Index: <h5 class='selCityInfo'>${city.indices.trafficTimeIndex}</h5></div>
+                                        <div class='indicesRow'>Pollution Index: <h5 class='selCityInfo'>${city.indices.pollutionIndex}</h5></div>
+                                        <div class='indicesRow'>Climate Index: <h5 class='selCityInfo'>${city.indices.climateIndex}</h5></div>
+                                    </div>`;
+    infoDiv[0].appendChild(cityInfos);  
+} 
+
+function getRandomNumber(num) {
+    return new Promise((resolve,reject) => {
+        const number = parseInt(Math.random()*num);
+        setTimeout(()=> {
+            resolve(number)
+        },500);
+    })
+}
+
+function qualityOfLifeIndex(city){
+        const qualityOfLifeIndex = (Math.max(0, 100 + city.indices.purchasingPowerInclRentIndex / 2.5 - (city.indices.housePriceToIncomeRatio * 1.0) - city.indices.costOfLivingIndex / 10 + city.indices.safetyIndex / 2.0 + city.indices.healthIndex / 2.5 - city.indices.trafficTimeIndex / 2.0 - city.indices.pollutionIndex * 2.0 / 3.0 + city.indices.climateIndex / 3.0)).toFixed(2);
+        return qualityOfLifeIndex;
+}
+
+function alertTime() {
+    setInterval( () =>
+        alert(showTime())
+    ,300000);
+}
+
+function showTime(){
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds(); 
+    return `Keep searching ! ${h}:${m}:${s}`;
+}
+
+// function randomNum() {
+//     return Math.floor(Math.random() * ((-1) * 100 - 1 * 100) + 1 * 100) / (1*100);
+// }

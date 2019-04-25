@@ -17,7 +17,8 @@
                 "housePriceToIncomeRatio": 22.21,
                 "trafficTimeIndex": 34.73,
                 "pollutionIndex": 60.90,
-                "climateIndex": 84.14
+                "climateIndex": 84.14,
+                "qualityOfLifeIndex": 112.44
             }
         },
         {
@@ -37,7 +38,8 @@
                 "housePriceToIncomeRatio": 16.41,
                 "trafficTimeIndex": 18.16,
                 "pollutionIndex": 47.41,
-                "climateIndex": 84.02
+                "climateIndex": 84.02,
+                "qualityOfLifeIndex": 133.07
             }
         },
         {
@@ -57,7 +59,8 @@
                 "housePriceToIncomeRatio": 11.49,
                 "trafficTimeIndex": 33.75,
                 "pollutionIndex": 32.48,
-                "climateIndex": 81.82
+                "climateIndex": 81.82,
+                "qualityOfLifeIndex": 162.04
             }
         },
         {
@@ -77,7 +80,8 @@
                 "housePriceToIncomeRatio": 14.05,
                 "trafficTimeIndex": 28.69,
                 "pollutionIndex": 73.18,
-                "climateIndex": 78.18
+                "climateIndex": 78.18,
+                "qualityOfLifeIndex": 108.09
             }
         },
         {
@@ -97,7 +101,8 @@
                 "housePriceToIncomeRatio": 14.65,
                 "trafficTimeIndex": 28.22,
                 "pollutionIndex": 82.62,
-                "climateIndex": 76.30
+                "climateIndex": 76.30,
+                "qualityOfLifeIndex": 105.46
             }
         },
         {
@@ -117,7 +122,8 @@
                 "housePriceToIncomeRatio": 8.87,
                 "trafficTimeIndex": 30.16,
                 "pollutionIndex": 66.10,
-                "climateIndex": 76.01
+                "climateIndex": 76.01,
+                "qualityOfLifeIndex": 127.34
             }
         },
         {
@@ -137,7 +143,8 @@
                 "housePriceToIncomeRatio": 14.83,
                 "trafficTimeIndex": 37.90,
                 "pollutionIndex": 52.74,
-                "climateIndex": 78.41
+                "climateIndex": 78.41,
+                "qualityOfLifeIndex": 126.07
             }
         },
         {
@@ -157,7 +164,8 @@
                 "housePriceToIncomeRatio": 11.08,
                 "trafficTimeIndex": 41.53,
                 "pollutionIndex": 73.87,
-                "climateIndex": 75.61
+                "climateIndex": 75.61,
+                "qualityOfLifeIndex": 120.77
             }
         },
         {
@@ -177,7 +185,8 @@
                 "housePriceToIncomeRatio": 13.38,
                 "trafficTimeIndex": 25.40,
                 "pollutionIndex": 24.13,
-                "climateIndex": 77.14
+                "climateIndex": 77.14,
+                "qualityOfLifeIndex": 171.22
             }
         },
         {
@@ -197,7 +206,8 @@
                 "housePriceToIncomeRatio": 10.30,
                 "trafficTimeIndex": 35.95,
                 "pollutionIndex": 58.25,
-                "climateIndex": 95.18
+                "climateIndex": 95.18,
+                "qualityOfLifeIndex": 126.58
             }
         },
         {
@@ -217,7 +227,8 @@
                 "housePriceToIncomeRatio": 10.74,
                 "trafficTimeIndex": 26.19,
                 "pollutionIndex": 63.27,
-                "climateIndex": 88.39
+                "climateIndex": 88.39,
+                "qualityOfLifeIndex": 131.87
             }
         },
         {
@@ -237,7 +248,8 @@
                 "housePriceToIncomeRatio": 19.80,
                 "trafficTimeIndex": 46.29,
                 "pollutionIndex": 66.67,
-                "climateIndex": 93.70
+                "climateIndex": 93.70,
+                "qualityOfLifeIndex": 110.01
             }
         },
         {
@@ -257,7 +269,8 @@
                 "housePriceToIncomeRatio": 17.28,
                 "trafficTimeIndex": 37.39,
                 "pollutionIndex": 63.46,
-                "climateIndex": 88.12
+                "climateIndex": 88.12,
+                "qualityOfLifeIndex": 127.59
             }
         },
         {
@@ -277,7 +290,8 @@
                 "housePriceToIncomeRatio": 12.73,
                 "trafficTimeIndex": 24.76,
                 "pollutionIndex": 16.99,
-                "climateIndex": 80.35
+                "climateIndex": 80.35,
+                "qualityOfLifeIndex": 193.07
             }
         },
         {
@@ -297,7 +311,8 @@
                 "housePriceToIncomeRatio": 16.11,
                 "trafficTimeIndex": 33.16,
                 "pollutionIndex": 22.08,
-                "climateIndex": 75.98
+                "climateIndex": 75.98,
+                "qualityOfLifeIndex": 188.48
             }
         },
         {
@@ -317,7 +332,8 @@
                 "housePriceToIncomeRatio": 10.53,
                 "trafficTimeIndex": 33.21,
                 "pollutionIndex": 40.63,
-                "climateIndex": 83.35
+                "climateIndex": 83.35,
+                "qualityOfLifeIndex": 166.80
             }
         },
         {
@@ -337,7 +353,8 @@
                 "housePriceToIncomeRatio": 19.12,
                 "trafficTimeIndex": 42.64,
                 "pollutionIndex": 67.71,
-                "climateIndex": 88.39
+                "climateIndex": 88.39,
+                "qualityOfLifeIndex": 125.09
             }
         },
         {
@@ -357,7 +374,8 @@
                 "housePriceToIncomeRatio": 12.26,
                 "trafficTimeIndex": 35.24,
                 "pollutionIndex": 56.28,
-                "climateIndex": 85.47
+                "climateIndex": 85.47,
+                "qualityOfLifeIndex": 150.74
             }
         },
         {
@@ -377,7 +395,8 @@
                 "housePriceToIncomeRatio": 13.81,
                 "trafficTimeIndex": 31.03,
                 "pollutionIndex": 65.83,
-                "climateIndex": 95.73
+                "climateIndex": 95.73,
+                "qualityOfLifeIndex": 141.85
             }
         },
         {
@@ -397,7 +416,8 @@
                 "housePriceToIncomeRatio": 18.00,
                 "trafficTimeIndex": 35.45,
                 "pollutionIndex": 38.41,
-                "climateIndex": 98.59
+                "climateIndex": 98.59,
+                "qualityOfLifeIndex": 149.54
             }
         },
         {
@@ -417,7 +437,8 @@
                 "housePriceToIncomeRatio": 12.81,
                 "trafficTimeIndex": 28.69,
                 "pollutionIndex": 36.85,
-                "climateIndex": 96.61
+                "climateIndex": 96.61,
+                "qualityOfLifeIndex": 155.43
             }
         },
         {
@@ -437,7 +458,8 @@
                 "housePriceToIncomeRatio": 20.83,
                 "trafficTimeIndex": 47.03,
                 "pollutionIndex": 59.65,
-                "climateIndex": 88.25
+                "climateIndex": 88.25,
+                "qualityOfLifeIndex": 125.67
             }
         },
         {
@@ -457,7 +479,8 @@
                 "housePriceToIncomeRatio": 9.09,
                 "trafficTimeIndex": 40.57,
                 "pollutionIndex": 55.62,
-                "climateIndex": 86.95
+                "climateIndex": 86.95,
+                "qualityOfLifeIndex": 147.53
             }
         },
         {
@@ -477,7 +500,8 @@
                 "housePriceToIncomeRatio": 9.46,
                 "trafficTimeIndex": 33.63,
                 "pollutionIndex": 15.94,
-                "climateIndex": 81.48
+                "climateIndex": 81.48,
+                "qualityOfLifeIndex": 204.42
             }
         },
         {
@@ -497,7 +521,8 @@
                 "housePriceToIncomeRatio": 10.34,
                 "trafficTimeIndex": 24.81,
                 "pollutionIndex": 29.44,
-                "climateIndex": 82.61
+                "climateIndex": 82.61,
+                "qualityOfLifeIndex": 187.84
             }
         },
         {
@@ -517,7 +542,8 @@
                 "housePriceToIncomeRatio": 10.91,
                 "trafficTimeIndex": 33.48,
                 "pollutionIndex": 24.32,
-                "climateIndex": 59.99
+                "climateIndex": 59.99,
+                "qualityOfLifeIndex": 166.49
             }
         },
         {
@@ -537,7 +563,8 @@
                 "housePriceToIncomeRatio": 14.42,
                 "trafficTimeIndex": 37.16,
                 "pollutionIndex": 16.73,
-                "climateIndex": 69.67
+                "climateIndex": 69.67,
+                "qualityOfLifeIndex": 166.45
             }
         },
         {
@@ -557,7 +584,8 @@
                 "housePriceToIncomeRatio": 18.41,
                 "trafficTimeIndex": 53.68,
                 "pollutionIndex": 61.32,
-                "climateIndex": 55.83
+                "climateIndex": 55.83,
+                "qualityOfLifeIndex": 105.39
             }
         },
         {
@@ -577,7 +605,8 @@
                 "housePriceToIncomeRatio": 14.17,
                 "trafficTimeIndex": 48.54,
                 "pollutionIndex": 61.22,
-                "climateIndex": 60.64
+                "climateIndex": 60.64,
+                "qualityOfLifeIndex": 111.59
             }
         },
         {
@@ -597,7 +626,8 @@
                 "housePriceToIncomeRatio": 12.14,
                 "trafficTimeIndex": 36.31,
                 "pollutionIndex": 55.62,
-                "climateIndex": 74.61
+                "climateIndex": 74.61,
+                "qualityOfLifeIndex": 144.58
             }
         },
         {
@@ -617,7 +647,8 @@
                 "housePriceToIncomeRatio": 10.35,
                 "trafficTimeIndex": 28.17,
                 "pollutionIndex": 28.58,
-                "climateIndex": 75.51
+                "climateIndex": 75.51,
+                "qualityOfLifeIndex": 164.78
             }
         },
         {
@@ -637,7 +668,8 @@
                 "housePriceToIncomeRatio": 17.69,
                 "trafficTimeIndex": 33.46,
                 "pollutionIndex": 36.13,
-                "climateIndex": 80.67
+                "climateIndex": 80.67,
+                "qualityOfLifeIndex": 159.16
             }
         },
         {
@@ -657,7 +689,8 @@
                 "housePriceToIncomeRatio": 11.31,
                 "trafficTimeIndex": 30.93,
                 "pollutionIndex": 30.77,
-                "climateIndex": 87.45
+                "climateIndex": 87.45,
+                "qualityOfLifeIndex": 173.29
             }
         }
     ]

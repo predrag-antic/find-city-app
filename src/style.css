@@ -22,7 +22,7 @@ body{
 
 @media(max-width:600px) {
     .header-h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -45,14 +45,14 @@ img {
     display: block;
 }
 
-.btn {
+.btn,.btnSrc,.rndBtn {
     background: #c57e6d;
     color : #ffffff;
     border: none;
     transition: all .2s ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,.btnSrc:hover, .rndBtn:hover {
     transform: scale(1.1);
     color: #ffffff;
 }
@@ -103,7 +103,7 @@ img {
     justify-content: center;
 }
 
-.indicesRow > h3{
+.indicesRow > h3,h5{
     margin-left: 20px;
 }
 
@@ -128,13 +128,50 @@ img {
 }
 
 
-.selInd select{
+.selInd select,.selNum select{
     display: none;
 }
 
-.selInd {
+.selInd,.selNum {
     height: 40px;
     border-radius: 3px;
     overflow: hidden;
     background: #fafafa;
+}
+
+.topCities {
+    margin-top : 50px;
+}
+
+.labelTOP {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+a {
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c57e6d;
+}
+
+.qol {
+    border-bottom: 1px solid black;
+    font-size: 30px;
+}
+
+.rndBtn {
+    margin-top:50px;
+}
+
+
+.cityInfos {
+    align-items: center;
+    justify-content: center
+}
+
+.table-responsive {
+    text-align: center;
 }
